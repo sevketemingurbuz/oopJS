@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter a number</p>
+    <input id= "numberBox" type="number" min="10" max="100">
+    <button onclick="validate()">enter</button>
+    <p id="demo"></p>
+
+    <script>
+        function validate() {
+            var numberEntered= document.getElementById("numberBox")
+            if (numberEntered.checkValidity() == true) {
+                document.getElementById("demo").innerHTML= "Valid OK"
+            }else{
+                document.getElementById("demo").innerHTML= "10 ile 100 arası rakam girin"
+            }
+        }
+    </script>
+</body>
+</html>
